@@ -13,7 +13,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": true,
             "outputPath": "dist/apps/ngx-tinynodes",
             "index": "apps/ngx-tinynodes/src/index.html",
             "main": "apps/ngx-tinynodes/src/main.ts",
@@ -26,7 +25,13 @@
             "styles": [
               "apps/ngx-tinynodes/src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -38,11 +43,8 @@
               ],
               "optimization": true,
               "outputHashing": "all",
-              "sourceMap": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
-              "vendorChunk": true,
               "buildOptimizer": true,
               "budgets": [
                 {
@@ -56,7 +58,8 @@
                 }
               ]
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
