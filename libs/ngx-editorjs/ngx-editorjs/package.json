@@ -1,18 +1,18 @@
 {
-  "name": "@umami-creative/ngx-editorjs",
-  "description": "A library for using EditorJS in any Angular application",
-  "version": "4.0.0",
+  "name": "@umami-creative/ngx-editorjs-ivy",
+  "description": "A library for using EditorJS in any Angular 16+ application",
+  "version": "5.0.0",
   "author": {
-    "name": "Tane Piper",
-    "email": "me@tane.dev",
-    "url": "https://tane.dev"
+    "name": "Kai Hentschel",
+    "email": "kai@umami-creative.de",
+    "url": "https://umami-creative.de"
   },
   "peerDependencies": {
-    "@angular/common": "~9.1.0",
-    "@angular/core": "~9.1.0",
-    "@angular/material": "~9.2.0",
+    "@angular/common": "~16.0.1",
+    "@angular/core": "~16.0.1",
+    "@angular/material": "~16.0.1",
     "@editorjs/editorjs": "^2.17.0",
-    "@tinynodes/ngx-editorjs-plugins": "^3.0.0"
+    "@umami-creative/ngx-editorjs-ivy-plugins": "^5.0.0"
   },
   "license": "MIT",
   "readme": "README.md",

@@ -1,11 +1,11 @@
 {
-  "name": "@umami-creative/ngx-editorjs-plugins",
+  "name": "@umami-creative/ngx-editorjs-ivy-plugins",
   "description": "Plugin service and default plugin modules for @tinynodes/ngx-editorjs",
-  "version": "3.0.0",
+  "version": "5.0.0",
   "author": {
-    "name": "Tane Piper",
-    "email": "me@tane.dev",
-    "url": "https://tane.dev"
+    "name": "Kai Hentschel",
+    "email": "kai@umami-creative.de",
+    "url": "https://umami-creative.de"
   },
   "license": "MIT",
   "readme": "README.md",
