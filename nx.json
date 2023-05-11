@@ -1,5 +1,4 @@
 {
-  "npmScope": "tinynodes",
   "implicitDependencies": {
     "angular.json": "*",
     "package.json": "*",
@@ -9,9 +8,6 @@
   },
   "projects": {
     "ngx-tinynodes": {
-      "tags": []
-    },
-    "ngx-tinynodes-e2e": {
       "tags": []
     },
     "ngx-editorjs-plugins": {
@@ -34,7 +30,7 @@
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": ["build"]
       }
     }
   }

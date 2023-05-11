@@ -71,41 +71,6 @@
               "browserTarget": "ngx-tinynodes:build:production"
             }
           }
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "ngx-tinynodes:build"
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "apps/ngx-tinynodes/jest.config.js",
-            "tsConfig": "apps/ngx-tinynodes/tsconfig.spec.json",
-            "setupFile": "apps/ngx-tinynodes/src/test-setup.ts",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "ngx-tinynodes-e2e": {
-      "root": "apps/ngx-tinynodes-e2e",
-      "projectType": "application",
-      "prefix": "",
-      "architect": {
-        "e2e": {
-          "builder": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/ngx-tinynodes-e2e/cypress.json",
-            "tsConfig": "apps/ngx-tinynodes-e2e/tsconfig.e2e.json",
-            "devServerTarget": "ngx-tinynodes:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "ngx-tinynodes:serve:production"
-            }
-          }
         }
       }
     },
@@ -125,15 +90,6 @@
             "production": {
               "tsConfig": "libs/ngx-editorjs/ngx-editorjs-plugins/tsconfig.lib.prod.json"
             }
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/ngx-editorjs/ngx-editorjs-plugins/jest.config.js",
-            "tsConfig": "libs/ngx-editorjs/ngx-editorjs-plugins/tsconfig.spec.json",
-            "setupFile": "libs/ngx-editorjs/ngx-editorjs-plugins/src/test-setup.ts",
-            "passWithNoTests": true
           }
         }
       },
@@ -156,15 +112,6 @@
               "tsConfig": "libs/ngx-editorjs/ngx-editorjs/tsconfig.lib.prod.json"
             }
           }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/ngx-editorjs/ngx-editorjs/jest.config.js",
-            "tsConfig": "libs/ngx-editorjs/ngx-editorjs/tsconfig.spec.json",
-            "setupFile": "libs/ngx-editorjs/ngx-editorjs/src/test-setup.ts",
-            "passWithNoTests": true
-          }
         }
       },
       "schematics": {}
@@ -174,17 +121,7 @@
       "sourceRoot": "libs/ngx-editorjs/ngx-editorjs-demo/src",
       "projectType": "library",
       "prefix": "tinynodes",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/ngx-editorjs/ngx-editorjs-demo/jest.config.js",
-            "tsConfig": "libs/ngx-editorjs/ngx-editorjs-demo/tsconfig.spec.json",
-            "setupFile": "libs/ngx-editorjs/ngx-editorjs-demo/src/test-setup.ts",
-            "passWithNoTests": true
-          }
-        }
-      },
+      "architect": {},
       "schematics": {}
     },
     "ngx-tinynodes-core": {
@@ -192,17 +129,7 @@
       "sourceRoot": "libs/ngx-tinynodes-core/src",
       "projectType": "library",
       "prefix": "tinynodes",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/ngx-tinynodes-core/jest.config.js",
-            "tsConfig": "libs/ngx-tinynodes-core/tsconfig.spec.json",
-            "setupFile": "libs/ngx-tinynodes-core/src/test-setup.ts",
-            "passWithNoTests": true
-          }
-        }
-      },
+      "architect": {},
       "schematics": {}
     },
     "ngx-tinynodes-components": {
@@ -210,16 +137,7 @@
       "root": "libs/ngx-tinynodes-components",
       "sourceRoot": "libs/ngx-tinynodes-components/src",
       "prefix": "tinynodes",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/ngx-tinynodes-components/jest.config.js",
-            "tsConfig": "libs/ngx-tinynodes-components/tsconfig.spec.json",
-            "setupFile": "libs/ngx-tinynodes-components/src/test-setup.ts"
-          }
-        }
-      },
+      "architect": {},
       "schematics": {
         "@nrwl/angular:component": {
           "styleext": "scss"
@@ -239,12 +157,7 @@
     "@nrwl/schematics:application": {
       "framework": "angular"
     },
-    "@nrwl/angular:application": {
-      "unitTestRunner": "jest",
-      "e2eTestRunner": "cypress"
-    },
-    "@nrwl/angular:library": {
-      "unitTestRunner": "jest"
-    }
+    "@nrwl/angular:application": {},
+    "@nrwl/angular:library": {}
   }
 }

@@ -1,8 +1,10 @@
 # Tinynodes Changelog
 
-<div class="alert alert-info">
-This changelog is related to the overall site. You can also find changelogs for libraries <a href="additional-documentation/tinynodes-library-docs.html">under the library docs</a>
-</div>
+## 11th May 2023
+
+Today `@umami-creative/ngx-editorjs-ivy@5.0.0` has been released, along with `@umami-creative/ngx-editorjs-ivy-plugins@5.0.0`
+
+use it with Angular 16+ and Ivy
 
 ## 30th July 2019
 
