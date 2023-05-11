@@ -231,7 +231,9 @@
     "warnings": {
       "versionMismatch": false
     },
-    "defaultCollection": "@nrwl/schematics"
+    "schematicCollections": [
+      "@nrwl/schematics"
+    ]
   },
   "schematics": {
     "@nrwl/schematics:application": {
@@ -244,6 +246,5 @@
     "@nrwl/angular:library": {
       "unitTestRunner": "jest"
     }
-  },
-  "defaultProject": "ngx-tinynodes"
+  }
 }

@@ -1,5 +1,5 @@
 import { AfterContentInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, Input } from '@angular/core';
-import { FormBuilder, FormControl } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormControl } from '@angular/forms';
 import { NgxEditorJSService } from '@tinynodes/ngx-editorjs';
 import { AppService, MenuGroup, NgxEditorJSDemo } from '@tinynodes/ngx-tinynodes-core';
 import { BehaviorSubject, Subject } from 'rxjs';
@@ -33,8 +33,8 @@ export class NgxTinynodesMaterialFormFieldDemoComponent implements AfterContentI
    */
   public editorForm = this.fb.group({
     pageName: [''],
-    pageTags: new FormControl([]),
-    pageEditor: new FormControl([]),
+    pageTags: new UntypedFormControl([]),
+    pageEditor: new UntypedFormControl([]),
   });
   /**
    * Internal onDestroy$ subject
@@ -63,7 +63,7 @@ export class NgxTinynodesMaterialFormFieldDemoComponent implements AfterContentI
     private app: AppService,
     private readonly editorService: NgxEditorJSService,
     private readonly cd: ChangeDetectorRef,
-    private readonly fb: FormBuilder
+    private readonly fb: UntypedFormBuilder
   ) {
     this.editorService
       .lastChange({ holder: this.holder })
