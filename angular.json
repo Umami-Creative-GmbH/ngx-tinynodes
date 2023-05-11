@@ -78,13 +78,6 @@
             "browserTarget": "ngx-tinynodes:build"
           }
         },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": ["apps/ngx-tinynodes/tsconfig.app.json", "apps/ngx-tinynodes/tsconfig.spec.json"],
-            "exclude": ["**/node_modules/**"]
-          }
-        },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
@@ -113,13 +106,6 @@
               "devServerTarget": "ngx-tinynodes:serve:production"
             }
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "apps/ngx-tinynodes-e2e/tsconfig.e2e.json",
-            "exclude": ["**/node_modules/**"]
-          }
         }
       }
     },
@@ -139,16 +125,6 @@
             "production": {
               "tsConfig": "libs/ngx-editorjs/ngx-editorjs-plugins/tsconfig.lib.prod.json"
             }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/ngx-editorjs/ngx-editorjs-plugins/tsconfig.lib.json",
-              "libs/ngx-editorjs/ngx-editorjs-plugins/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**"]
           }
         },
         "test": {
@@ -181,16 +157,6 @@
             }
           }
         },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/ngx-editorjs/ngx-editorjs/tsconfig.lib.json",
-              "libs/ngx-editorjs/ngx-editorjs/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**"]
-          }
-        },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
@@ -209,16 +175,6 @@
       "projectType": "library",
       "prefix": "tinynodes",
       "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/ngx-editorjs/ngx-editorjs-demo/tsconfig.lib.json",
-              "libs/ngx-editorjs/ngx-editorjs-demo/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**"]
-          }
-        },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
@@ -237,13 +193,6 @@
       "projectType": "library",
       "prefix": "tinynodes",
       "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": ["libs/ngx-tinynodes-core/tsconfig.lib.json", "libs/ngx-tinynodes-core/tsconfig.spec.json"],
-            "exclude": ["**/node_modules/**"]
-          }
-        },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
@@ -262,16 +211,6 @@
       "sourceRoot": "libs/ngx-tinynodes-components/src",
       "prefix": "tinynodes",
       "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/ngx-tinynodes-components/tsconfig.lib.json",
-              "libs/ngx-tinynodes-components/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**"]
-          }
-        },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {

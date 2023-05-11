@@ -12,21 +12,22 @@ import { AppContainerComponent } from './app.component';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
+    imports: [
         MaterialModule,
         RouterModule.forRoot([]),
         ApplicationDataModule,
         HttpClientModule,
         NoopAnimationsModule
-      ],
-      declarations: [AppContainerComponent, NavBarComponent, SidebarComponent],
-      providers: [
+    ],
+    declarations: [AppContainerComponent, NavBarComponent, SidebarComponent],
+    providers: [
         {
-          provide: APP_BASE_HREF,
-          useValue: '/'
+            provide: APP_BASE_HREF,
+            useValue: '/'
         }
-      ]
-    }).compileComponents();
+    ],
+    teardown: { destroyAfterEach: false }
+}).compileComponents();
   }));
 
   it('should create the app', () => {

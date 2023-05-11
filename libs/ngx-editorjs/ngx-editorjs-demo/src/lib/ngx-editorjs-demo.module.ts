@@ -15,19 +15,18 @@ import { NgxJsonViewerModule } from 'ngx-json-viewer';
 import { NgxEditorjsPluginsModule } from '@tinynodes/ngx-editorjs-plugins';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    NgxJsonViewerModule,
-    RouterModule.forChild(ngxEditorjsDemoRoutes),
-    ReactiveFormsModule,
-    PageStoreModule,
-    NgxTinynodesCoreModule,
-    NgxEditorJSComponentModule,
-    NgxEditorjsPluginsModule,
-    NgxEditorJSDemoMaterialModule
-  ],
-  declarations: [PageContainerComponent, NgxEditorJSDemoHomeComponent],
-  exports: [PageStoreModule, PageContainerComponent],
-  entryComponents: [PageContainerComponent]
+    imports: [
+        CommonModule,
+        NgxJsonViewerModule,
+        RouterModule.forChild(ngxEditorjsDemoRoutes),
+        ReactiveFormsModule,
+        PageStoreModule,
+        NgxTinynodesCoreModule,
+        NgxEditorJSComponentModule,
+        NgxEditorjsPluginsModule,
+        NgxEditorJSDemoMaterialModule
+    ],
+    declarations: [PageContainerComponent, NgxEditorJSDemoHomeComponent],
+    exports: [PageStoreModule, PageContainerComponent]
 })
 export class NgxEditorjsDemoModule {}

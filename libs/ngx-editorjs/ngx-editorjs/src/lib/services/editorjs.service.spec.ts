@@ -27,46 +27,47 @@ describe('NgxEditorJSService', () => {
     onDestroy$ = new Subject<boolean>();
 
     TestBed.configureTestingModule({
-      imports: [NgxEditorjsPluginsModule],
-      providers: [
+    imports: [NgxEditorjsPluginsModule],
+    providers: [
         {
-          provide: PLUGIN_CONFIG,
-          useValue: {
-            key: 'plugin',
-            type: 'block',
-            pluginName: 'EditorJS Mock Block Plugin'
-          },
-          multi: true
+            provide: PLUGIN_CONFIG,
+            useValue: {
+                key: 'plugin',
+                type: 'block',
+                pluginName: 'EditorJS Mock Block Plugin'
+            },
+            multi: true
         },
         {
-          provide: PluginClasses,
-          useFactory: createPluginConfig,
-          deps: [PLUGIN_CONFIG, EDITOR_JS_TOOL_INJECTOR]
+            provide: PluginClasses,
+            useFactory: createPluginConfig,
+            deps: [PLUGIN_CONFIG, EDITOR_JS_TOOL_INJECTOR]
         },
         {
-          provide: NgZone,
-          useClass: MockNgZone
+            provide: NgZone,
+            useClass: MockNgZone
         },
         {
-          provide: FOR_ROOT_OPTIONS_TOKEN,
-          useValue: {}
+            provide: FOR_ROOT_OPTIONS_TOKEN,
+            useValue: {}
         },
         {
-          provide: NGX_EDITORJS_CONFIG,
-          useFactory: createModuleConfig,
-          deps: [FOR_ROOT_OPTIONS_TOKEN]
+            provide: NGX_EDITORJS_CONFIG,
+            useFactory: createModuleConfig,
+            deps: [FOR_ROOT_OPTIONS_TOKEN]
         },
         {
-          provide: EDITORJS_MODULE_IMPORT,
-          useValue: EditorJS
+            provide: EDITORJS_MODULE_IMPORT,
+            useValue: EditorJS
         },
         {
-          provide: EditorJSInstance,
-          useFactory: createEditorJSInstance,
-          deps: [EDITORJS_MODULE_IMPORT]
+            provide: EditorJSInstance,
+            useFactory: createEditorJSInstance,
+            deps: [EDITORJS_MODULE_IMPORT]
         }
-      ]
-    }).compileComponents();
+    ],
+    teardown: { destroyAfterEach: false }
+}).compileComponents();
 
     service = TestBed.get(NgxEditorJSService);
     service.createInstance({ config: { holder } });

@@ -4,8 +4,9 @@ import { NgxEditorjsDemoModule } from './ngx-editorjs-demo.module';
 describe('NgxEditorjsDemoModule', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [NgxEditorjsDemoModule]
-    }).compileComponents();
+    imports: [NgxEditorjsDemoModule],
+    teardown: { destroyAfterEach: false }
+}).compileComponents();
   }));
 
   it('should create', () => {

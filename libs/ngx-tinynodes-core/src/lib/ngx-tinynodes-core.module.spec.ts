@@ -4,8 +4,9 @@ import { NgxTinynodesCoreModule } from './ngx-tinynodes-core.module';
 describe('NgxTinynodesCoreModule', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [NgxTinynodesCoreModule]
-    }).compileComponents();
+    imports: [NgxTinynodesCoreModule],
+    teardown: { destroyAfterEach: false }
+}).compileComponents();
   }));
 
   it('should create', () => {

@@ -23,33 +23,34 @@ describe('NgxEditorJSComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [NgxEditorjsPluginsModule],
-      declarations: [TestHostComponent, NgxEditorJSDirective, NgxEditorJSComponent],
-      providers: [
+    imports: [NgxEditorjsPluginsModule],
+    declarations: [TestHostComponent, NgxEditorJSDirective, NgxEditorJSComponent],
+    providers: [
         {
-          provide: NgZone,
-          useClass: MockNgZone
+            provide: NgZone,
+            useClass: MockNgZone
         },
         {
-          provide: FOR_ROOT_OPTIONS_TOKEN,
-          useValue: {}
+            provide: FOR_ROOT_OPTIONS_TOKEN,
+            useValue: {}
         },
         {
-          provide: NGX_EDITORJS_CONFIG,
-          useFactory: createModuleConfig,
-          deps: [FOR_ROOT_OPTIONS_TOKEN]
+            provide: NGX_EDITORJS_CONFIG,
+            useFactory: createModuleConfig,
+            deps: [FOR_ROOT_OPTIONS_TOKEN]
         },
         {
-          provide: EDITORJS_MODULE_IMPORT,
-          useValue: EditorJS
+            provide: EDITORJS_MODULE_IMPORT,
+            useValue: EditorJS
         },
         {
-          provide: EditorJSInstance,
-          useFactory: createEditorJSInstance,
-          deps: [EDITORJS_MODULE_IMPORT]
+            provide: EditorJSInstance,
+            useFactory: createEditorJSInstance,
+            deps: [EDITORJS_MODULE_IMPORT]
         }
-      ]
-    }).compileComponents();
+    ],
+    teardown: { destroyAfterEach: false }
+}).compileComponents();
   }));
 
   it('should create the component', () => {

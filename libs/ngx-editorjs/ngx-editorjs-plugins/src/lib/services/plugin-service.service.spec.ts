@@ -13,41 +13,42 @@ class MockTool {
 describe('PluginServiceService', () => {
   beforeEach(() =>
     TestBed.configureTestingModule({
-      providers: [
+    providers: [
         {
-          provide: EDITOR_JS_TOOL_INJECTOR,
-          useValue: MockTool,
-          multi: true
+            provide: EDITOR_JS_TOOL_INJECTOR,
+            useValue: MockTool,
+            multi: true
         },
         {
-          provide: PLUGIN_CONFIG,
-          useValue: {
-            key: 'test-1',
-            type: PluginTypes.Block,
-            pluginName: 'Test Block 1'
-          },
-          multi: true
+            provide: PLUGIN_CONFIG,
+            useValue: {
+                key: 'test-1',
+                type: PluginTypes.Block,
+                pluginName: 'Test Block 1'
+            },
+            multi: true
         }, {
-          provide: EDITOR_JS_TOOL_INJECTOR,
-          useValue: MockTool,
-          multi: true
+            provide: EDITOR_JS_TOOL_INJECTOR,
+            useValue: MockTool,
+            multi: true
         },
         {
-          provide: PLUGIN_CONFIG,
-          useValue: {
-            key: 'test-2',
-            type: PluginTypes.Block,
-            pluginName: 'Test Block 2'
-          },
-          multi: true
+            provide: PLUGIN_CONFIG,
+            useValue: {
+                key: 'test-2',
+                type: PluginTypes.Block,
+                pluginName: 'Test Block 2'
+            },
+            multi: true
         },
         {
-          provide: PluginClasses,
-          useFactory: createPluginConfig,
-          deps: [ PLUGIN_CONFIG, EDITOR_JS_TOOL_INJECTOR ]
+            provide: PluginClasses,
+            useFactory: createPluginConfig,
+            deps: [PLUGIN_CONFIG, EDITOR_JS_TOOL_INJECTOR]
         }
-      ]
-    })
+    ],
+    teardown: { destroyAfterEach: false }
+})
   );
 
   it('should be created', () => {

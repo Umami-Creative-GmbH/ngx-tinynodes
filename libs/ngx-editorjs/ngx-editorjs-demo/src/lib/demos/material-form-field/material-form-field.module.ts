@@ -19,19 +19,18 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    NgxTinynodesComponentsModule,
-    RouterModule.forChild(routes),
-    ReactiveFormsModule,
-    NgxJsonViewerModule,
-    PageStoreModule,
-    NgxEditorJSMatFieldModule,
-    NgxEditorjsPluginsModule,
-    NgxTinynodesCoreModule,
-    NgxEditorJSDemoMaterialModule
-  ],
-  declarations: [NgxTinynodesMaterialFormFieldDemoComponent],
-  entryComponents: [NgxTinynodesMaterialFormFieldDemoComponent]
+    imports: [
+        CommonModule,
+        NgxTinynodesComponentsModule,
+        RouterModule.forChild(routes),
+        ReactiveFormsModule,
+        NgxJsonViewerModule,
+        PageStoreModule,
+        NgxEditorJSMatFieldModule,
+        NgxEditorjsPluginsModule,
+        NgxTinynodesCoreModule,
+        NgxEditorJSDemoMaterialModule
+    ],
+    declarations: [NgxTinynodesMaterialFormFieldDemoComponent]
 })
 export class NgxTinynodesMaterialFormFieldDemo {}
