@@ -39,7 +39,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": true,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -128,7 +127,7 @@
       "prefix": "tinynodes",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "libs/ngx-editorjs/ngx-editorjs-plugins/tsconfig.lib.json",
             "project": "libs/ngx-editorjs/ngx-editorjs-plugins/ng-package.json"
@@ -168,7 +167,7 @@
       "prefix": "tinynodes",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "libs/ngx-editorjs/ngx-editorjs/tsconfig.lib.json",
             "project": "libs/ngx-editorjs/ngx-editorjs/ng-package.json"
