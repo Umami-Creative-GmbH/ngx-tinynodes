@@ -14,8 +14,8 @@ import {
   ViewChild
 } from '@angular/core';
 import { NG_VALUE_ACCESSOR, NgControl } from '@angular/forms';
-import { MatChipInputEvent } from '@angular/material/chips';
-import { MatFormFieldControl } from '@angular/material/form-field';
+import { MatLegacyChipInputEvent as MatChipInputEvent } from '@angular/material/legacy-chips';
+import { MatLegacyFormFieldControl as MatFormFieldControl } from '@angular/material/legacy-form-field';
 import { Subject } from 'rxjs';
 import { NgxTinynodesMatFieldComponent } from '../../types/components';
 

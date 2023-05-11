@@ -1,6 +1,6 @@
 import { ControlValueAccessor } from '@angular/forms';
 import { AfterContentInit, DoCheck, OnDestroy, OnInit } from '@angular/core';
-import { MatFormFieldControl } from '@angular/material/form-field';
+import { MatLegacyFormFieldControl as MatFormFieldControl } from '@angular/material/legacy-form-field';
 
 export interface NgxTinynodesMatFieldComponent<T>
   extends ControlValueAccessor,

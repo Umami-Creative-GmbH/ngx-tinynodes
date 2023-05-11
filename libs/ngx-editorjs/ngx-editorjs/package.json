@@ -1,5 +1,5 @@
 {
-  "name": "@tinynodes/ngx-editorjs",
+  "name": "@umami-creative/ngx-editorjs",
   "description": "A library for using EditorJS in any Angular application",
   "version": "4.0.0",
   "author": {
@@ -18,7 +18,7 @@
   "readme": "README.md",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tanepiper/ngx-tinynodes.git"
+    "url": "https://github.com/Umami-Creative-GmbH/ngx-tinynodes"
   },
   "dependencies": {
     "tslib": "^2.0.0"

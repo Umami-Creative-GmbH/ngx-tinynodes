@@ -1,5 +1,5 @@
 {
-  "name": "@tinynodes/ngx-editorjs-plugins",
+  "name": "@umami-creative/ngx-editorjs-plugins",
   "description": "Plugin service and default plugin modules for @tinynodes/ngx-editorjs",
   "version": "3.0.0",
   "author": {
@@ -11,7 +11,7 @@
   "readme": "README.md",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tanepiper/ngx-tinynodes.git"
+    "url": "https://github.com/Umami-Creative-GmbH/ngx-tinynodes"
   },
   "keywords": [
     "angular",
