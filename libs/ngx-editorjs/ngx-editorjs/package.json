@@ -20,6 +20,9 @@
     "type": "git",
     "url": "https://github.com/tanepiper/ngx-tinynodes.git"
   },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
   "keywords": [
     "angular",
     "typescript",

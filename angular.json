@@ -19,10 +19,14 @@
             "main": "apps/ngx-tinynodes/src/main.ts",
             "polyfills": "apps/ngx-tinynodes/src/polyfills.ts",
             "tsConfig": "apps/ngx-tinynodes/tsconfig.app.json",
-            "assets": ["apps/ngx-tinynodes/src/favicon.ico", "apps/ngx-tinynodes/src/assets"],
-            "styles": ["apps/ngx-tinynodes/src/styles.css"],
-            "scripts": [],
-            "es5BrowserSupport": false
+            "assets": [
+              "apps/ngx-tinynodes/src/favicon.ico",
+              "apps/ngx-tinynodes/src/assets"
+            ],
+            "styles": [
+              "apps/ngx-tinynodes/src/styles.css"
+            ],
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -284,7 +288,6 @@
   },
   "cli": {
     "warnings": {
-      "typescriptMismatch": false,
       "versionMismatch": false
     },
     "defaultCollection": "@nrwl/schematics"
