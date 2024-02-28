@@ -1,7 +1,7 @@
 <div class="container">
   <mat-card class="application-card">
     <mat-card-header>
-      <mat-card-title><code>@tinynodes/ngx-editor</code> Material Field Demo</mat-card-title>
+      <mat-card-title><code>&#64;tinynodes/ngx-editor</code> Material Field Demo</mat-card-title>
       <mat-card-subtitle>A single page demo of the <code>EditorJS</code> Material Field component</mat-card-subtitle>
     </mat-card-header>
 
@@ -13,13 +13,17 @@
       <button mat-raised-button color="primary" (click)="save()">Save</button>
       <button mat-raised-button color="primary" (click)="clear()">Clear</button>
       <button mat-raised-button color="primary" (click)="reset()">Reset</button>
-      <button mat-raised-button color="accent" *ngIf="(autosave | async) === 0"
+      @if ((autosave | async) === 0) {
+<button mat-raised-button color="accent"
               (click)="enableAutosave(autosaveTime.value * 1000)">
         Enable Editor Autosave
       </button>
-      <button mat-raised-button color="warn" *ngIf="(autosave | async) > 0" (click)="disableAutosave()">Disable
+}
+      @if ((autosave | async) > 0) {
+<button mat-raised-button color="warn" (click)="disableAutosave()">Disable
         Editor Autosave
       </button>
+}
 
 
       <mat-form-field>
@@ -27,12 +31,14 @@
         <input matInput #autosaveTime type="number" id="autosaveTime" placeholder="Enter a value for the autosave"
                value="10"/>
         <span matSuffix>seconds</span>
-        <mat-hint *ngIf="(autosave | async) > 0">
+        @if ((autosave | async) > 0) {
+<mat-hint>
           EditorJS Autosave is enabled, now when you focus on the component the reactive form value will be updated -
           You still need to call
           save to save all the form data.
         </mat-hint
         >
+}
       </mat-form-field>
     </mat-card-actions>
     <mat-card-content class="form-content">
@@ -50,8 +56,9 @@
         <mat-form-field>
           <mat-label>Content Editor for {{ editorForm.value.pageName || 'Page Name' }}</mat-label>
           <mat-hint>Click on the editor to active it</mat-hint>
-          <ngx-editorjs-mat-field
-            *ngIf="holder"
+          @if (holder) {
+<ngx-editorjs-mat-field
+           
             [id]="holder"
             [holder]="holder"
             formCotrolName="pageEditor"
@@ -59,11 +66,14 @@
             placeholder="EditorJS for {{ editorForm.value.pageName }}"
             [excludeTools]="['image']"
           ></ngx-editorjs-mat-field>
+}
         </mat-form-field>
       </form>
     </mat-card-content>
     <mat-card-footer>
-      <ngx-tinynodes-mat-json-output  *ngIf="(editorForm.valueChanges | async); let changes" [json]="changes"></ngx-tinynodes-mat-json-output>
+      @if ((editorForm.valueChanges | async); as changes) {
+<ngx-tinynodes-mat-json-output  [json]="changes"></ngx-tinynodes-mat-json-output>
+}
     </mat-card-footer>
   </mat-card>
 </div>

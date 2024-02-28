@@ -22,15 +22,19 @@
         <mat-card-header>
           <mat-card-title>Links</mat-card-title>
           <mat-card-subtitle
-            >Links for all things related to <code>@tinynodes/{{ title }}</code></mat-card-subtitle
+            >Links for all things related to <code>&#64;tinynodes/{{ title }}</code></mat-card-subtitle
           >
         </mat-card-header>
         <mat-card-content>
-          <mat-list *ngIf="menu">
-            <mat-list-item *ngFor="let link of menu.items">
+          @if (menu) {
+<mat-list>
+            @for (link of menu.items; track link) {
+<mat-list-item>
               <a mat-raised-button color="primary" [href]="link.link" target="_new">{{ link.label }}</a>
             </mat-list-item>
+}
           </mat-list>
+}
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>

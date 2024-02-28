@@ -44,3 +44,4 @@ Thumbs.db
 .firebase
 /ngx-tinynodes.iml
 .yarn/
+.nx/cache

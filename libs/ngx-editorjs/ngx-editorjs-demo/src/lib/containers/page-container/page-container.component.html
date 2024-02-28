@@ -1,7 +1,7 @@
 <div class="container">
   <mat-card class="application-card">
     <mat-card-header>
-      <mat-card-title><code>@tinynodes/ngx-editor</code> Demo</mat-card-title>
+      <mat-card-title><code>&#64;tinynodes/ngx-editor</code> Demo</mat-card-title>
       <mat-card-subtitle>A single page demo of the <code>EditorJS</code> component</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
@@ -13,15 +13,21 @@
         <h3 mat-card-title>Demo</h3>
         <button mat-raised-button (click)="save()">Save</button>
         <button mat-raised-button (click)="clear()">Clear</button>
-        <button mat-raised-button *ngIf="(blocks | async); let b" (click)="reset()">Reset</button>
+        @if ((blocks | async); as b) {
+<button mat-raised-button (click)="reset()">Reset</button>
+}
       </mat-card-actions>
       <mat-card-content>
         <mat-list>
           <mat-list-item>Ready: {{ ngxEditorJS.isReady | async }}</mat-list-item>
           <mat-list-item
             >Has Changed:
-            <span *ngIf="(ngxEditorJS.hasChanged | async); let change">{{ change.time }}</span>
-            <span *ngIf="!(ngxEditorJS.hasChanged | async)">0</span>
+            @if ((ngxEditorJS.hasChanged | async); as change) {
+<span>{{ change.time }}</span>
+}
+            @if (!(ngxEditorJS.hasChanged | async)) {
+<span>0</span>
+}
           </mat-list-item>
           <mat-list-item>Touched: {{ ngxEditorJS.isTouched | async }}</mat-list-item>
           <mat-list-item>Focused: {{ ngxEditorJS.isFocused | async }}</mat-list-item>

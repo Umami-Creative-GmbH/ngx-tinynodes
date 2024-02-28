@@ -1,8 +1,12 @@
 <mat-chip-list #chipList>
-  <mat-chip *ngFor="let tag of tags" [selectable]="true" [removable]="true" (removed)="removeTag(tag)">
+  @for (tag of tags; track tag) {
+<mat-chip [selectable]="true" [removable]="true" (removed)="removeTag(tag)">
     {{ tag }}
-    <mat-icon matChipRemove *ngIf="true">cancel</mat-icon>
+    @if (true) {
+<mat-icon matChipRemove>cancel</mat-icon>
+}
   </mat-chip>
+}
   <input
     #chipListInput
     placeholder="New Tag..."
