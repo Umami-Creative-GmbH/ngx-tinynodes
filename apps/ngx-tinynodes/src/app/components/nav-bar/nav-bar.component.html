@@ -7,12 +7,16 @@
     <a [routerLink]="['/']" routerLinkActive="router-link-active">{{ title }}</a>
   </span>
   <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
-    <ul fxLayout fxLayoutGap="20px" class="navigation-items" *ngIf="menu">
-      <li *ngFor="let menuItem of menu.items">
+    @if (menu) {
+<ul fxLayout fxLayoutGap="20px" class="navigation-items">
+      @for (menuItem of menu.items; track menuItem) {
+<li>
         <a [href]="menuItem.link" target="_new">
           <span class="label">{{ menuItem.label }}</span>
         </a>
       </li>
+}
     </ul>
+}
   </div>
 </mat-toolbar>

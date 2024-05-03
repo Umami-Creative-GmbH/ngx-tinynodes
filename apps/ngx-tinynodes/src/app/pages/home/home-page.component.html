@@ -10,13 +10,17 @@
         the menu to the left.
       </p>
       <p>You can also visit the sites below for additional documentation and code:</p>
-      <mat-list *ngIf="(menu | async); let menuItems">
-        <mat-list-item *ngFor="let menu of menuItems.items">
+      @if ((menu | async); as menuItems) {
+<mat-list>
+        @for (menu of menuItems.items; track menu) {
+<mat-list-item>
           <a mat-raised-button color="primary" href="{{ menu.link }}" target="_new">
             <span class="label">{{ menu.label }}</span>
           </a>
         </mat-list-item>
+}
       </mat-list>
+}
     </mat-card-content>
   </mat-card>
 </div>
