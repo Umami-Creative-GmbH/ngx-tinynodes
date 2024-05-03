@@ -1,18 +1,17 @@
 {
   "name": "@umami-creative/ngx-editorjs-ivy",
   "description": "A library for using EditorJS in any Angular 17+ application",
-  "version": "17.0.0",
+  "version": "17.3.7",
   "author": {
     "name": "Kai Hentschel",
     "email": "kai@umami-creative.de",
     "url": "https://umami-creative.de"
   },
   "peerDependencies": {
-    "@angular/common": "~16.0.1",
-    "@angular/core": "~16.0.1",
-    "@angular/material": "~16.0.1",
-    "@editorjs/editorjs": "^2.17.0",
-    "@umami-creative/ngx-editorjs-ivy-plugins": "^5.0.0"
+    "@angular/common": "~17.3.7",
+    "@angular/core": "~17.3.7",
+    "@editorjs/editorjs": "^2.29.1",
+    "@umami-creative/ngx-editorjs-ivy-plugins": "^17.0.0"
   },
   "license": "MIT",
   "readme": "README.md",
@@ -21,7 +20,7 @@
     "url": "https://github.com/Umami-Creative-GmbH/ngx-tinynodes"
   },
   "dependencies": {
-    "tslib": "^2.0.0"
+    "tslib": "^2.6.2"
   },
   "keywords": [
     "angular",
