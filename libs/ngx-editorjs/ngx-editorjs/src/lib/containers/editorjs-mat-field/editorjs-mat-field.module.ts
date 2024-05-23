@@ -2,8 +2,8 @@ import { ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core
 import { NgxEditorJSComponentModule } from '../editorjs/editorjs.module';
 import { NgxEditorJSMatFieldComponent } from './editorjs-mat-field.component';
 import { FOR_ROOT_OPTIONS_TOKEN, NgxEditorJSModuleConfig } from '../../types/config';
-import { MatLegacyFormFieldModule as MatFormFieldModule } from '@angular/material/legacy-form-field';
-import { MatLegacyInputModule as MatInputModule } from '@angular/material/legacy-input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { CommonModule } from '@angular/common';
 
 /**
