@@ -1,7 +1,7 @@
 {
   "extends": "../../../tsconfig.json",
   "compilerOptions": {
-    "types": ["node", "jest"],
+    "types": ["node"],
     "paths": {
       "@tinynodes/ngx-editorjs-plugins": ["libs/ngx-editorjs/ngx-editorjs-plugins/src/*.ts", "dist/libs/ngx-editorjs-plugins"]
     }

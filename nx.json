@@ -36,7 +36,6 @@
     "sharedGlobals": [
       "{workspaceRoot}/angular.json",
       "{workspaceRoot}/tsconfig.json",
-      "{workspaceRoot}/tslint.json",
       "{workspaceRoot}/nx.json"
     ],
     "production": [
