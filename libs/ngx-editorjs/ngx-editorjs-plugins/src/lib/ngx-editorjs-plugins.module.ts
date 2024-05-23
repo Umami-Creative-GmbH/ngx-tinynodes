@@ -23,20 +23,7 @@ import { NgxEditorJSPluginServiceModule } from './services/plugin-service.module
  */
 @NgModule({
   imports: [
-    CommonModule,
-    NgxEditorJSPluginServiceModule,
-    PluginCodeModule,
-    PluginHeaderModule,
-    PluginImageModule,
-    PluginLinkModule,
-    PluginListModule,
-    PluginMarkerModule,
-    PluginParagraphModule,
-    PluginSimpleImageModule,
-    PluginInlineCodeModule,
-    PluginWarningModule,
-    PluginQuoteModule,
-    PluginEmbedModule
+    CommonModule
   ],
   exports: [
     NgxEditorJSPluginServiceModule,
