@@ -1,15 +1,9 @@
 {
   "projects": {
-    "ngx-tinynodes": {
-      "tags": []
-    },
     "ngx-editorjs-plugins": {
       "tags": []
     },
     "ngx-editorjs": {
-      "tags": []
-    },
-    "ngx-editorjs-demo": {
       "tags": []
     },
     "ngx-tinynodes-core": {

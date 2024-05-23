@@ -5,6 +5,7 @@
     "declaration": false,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "ES2022",
@@ -24,7 +25,6 @@
       "@tinynodes/ngx-tinynodes-components": ["libs/ngx-tinynodes-components/src/index.ts"],
       "@tinynodes/ngx-tinynodes-core": ["libs/ngx-tinynodes-core/src/index.ts"]
     },
-    "downlevelIteration": true,
     "useDefineForClassFields": false
   },
   "exclude": ["node_modules", "tmp"]

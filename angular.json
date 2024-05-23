@@ -3,77 +3,6 @@
   "version": 1,
   "newProjectRoot": "",
   "projects": {
-    "ngx-tinynodes": {
-      "root": "apps/ngx-tinynodes/",
-      "sourceRoot": "apps/ngx-tinynodes/src",
-      "projectType": "application",
-      "prefix": "tinynodes",
-      "schematics": {},
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/apps/ngx-tinynodes",
-            "index": "apps/ngx-tinynodes/src/index.html",
-            "main": "apps/ngx-tinynodes/src/main.ts",
-            "polyfills": "apps/ngx-tinynodes/src/polyfills.ts",
-            "tsConfig": "apps/ngx-tinynodes/tsconfig.app.json",
-            "assets": [
-              "apps/ngx-tinynodes/src/favicon.ico",
-              "apps/ngx-tinynodes/src/assets"
-            ],
-            "styles": [
-              "apps/ngx-tinynodes/src/styles.css"
-            ],
-            "scripts": [],
-            "vendorChunk": true,
-            "extractLicenses": false,
-            "buildOptimizer": false,
-            "sourceMap": true,
-            "optimization": false,
-            "namedChunks": true
-          },
-          "configurations": {
-            "production": {
-              "fileReplacements": [
-                {
-                  "replace": "apps/ngx-tinynodes/src/environments/environment.ts",
-                  "with": "apps/ngx-tinynodes/src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "namedChunks": false,
-              "extractLicenses": true,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb"
-                }
-              ]
-            }
-          },
-          "defaultConfiguration": ""
-        },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "ngx-tinynodes:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "ngx-tinynodes:build:production"
-            }
-          }
-        }
-      }
-    },
     "ngx-editorjs-plugins": {
       "root": "libs/ngx-editorjs/ngx-editorjs-plugins",
       "sourceRoot": "libs/ngx-editorjs/ngx-editorjs-plugins/src",
@@ -114,14 +43,6 @@
           }
         }
       },
-      "schematics": {}
-    },
-    "ngx-editorjs-demo": {
-      "root": "libs/ngx-editorjs/ngx-editorjs-demo",
-      "sourceRoot": "libs/ngx-editorjs/ngx-editorjs-demo/src",
-      "projectType": "library",
-      "prefix": "tinynodes",
-      "architect": {},
       "schematics": {}
     },
     "ngx-tinynodes-core": {
