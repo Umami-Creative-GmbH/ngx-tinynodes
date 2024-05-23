@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
-import { EDITOR_JS_TOOL_INJECTOR, PLUGIN_CONFIG, PluginClasses, PluginTypes } from '../../types/plugins';
+import { EDITOR_JS_TOOL_INJECTOR, PLUGIN_CONFIG, PluginTypes } from '../../types/plugins';
 
 import SimpleImage from '@editorjs/simple-image';
-import { createPluginConfig } from '../../util/plugin';
 
 /**
  * A module that provides the default EditorJS `<img>` block tool.

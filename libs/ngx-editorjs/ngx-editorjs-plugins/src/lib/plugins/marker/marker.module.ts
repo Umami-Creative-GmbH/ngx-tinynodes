@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
-import { EDITOR_JS_TOOL_INJECTOR, PLUGIN_CONFIG, PluginClasses, PluginTypes } from '../../types/plugins';
+import { EDITOR_JS_TOOL_INJECTOR, PLUGIN_CONFIG, PluginTypes } from '../../types/plugins';
 import Marker from '@editorjs/paragraph';
-import { createPluginConfig } from '../../util/plugin';
 
 /**
  * A module that provides the default EditorJS `<p>` block tool.
