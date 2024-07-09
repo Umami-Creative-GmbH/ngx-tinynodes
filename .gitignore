@@ -45,3 +45,4 @@ Thumbs.db
 /ngx-tinynodes.iml
 .yarn/
 .nx/cache
+.nx/workspace-data
