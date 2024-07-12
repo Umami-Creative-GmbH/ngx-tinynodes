@@ -1,7 +1,7 @@
 {
   "name": "@umami-creative/ngx-editorjs-ivy-plugins",
   "description": "Plugin service and default plugin modules for @umami-creative/ngx-editorjs",
-  "version": "18.1.0",
+  "version": "18.1.1",
   "author": {
     "name": "Kai Hentschel",
     "email": "kai@umami-creative.de",
