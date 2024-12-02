@@ -39,11 +39,12 @@ export const EDITORJS_FORM_VALUE_ACCESSOR: Provider = {
  * <ngx-editorjs holder="my-editor"></ngx-editorjs>
  */
 @Component({
-  selector: 'ngx-editorjs',
-  templateUrl: 'editorjs.component.html',
-  styleUrls: ['editorjs.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [EDITORJS_FORM_VALUE_ACCESSOR]
+    selector: 'ngx-editorjs',
+    templateUrl: 'editorjs.component.html',
+    styleUrls: ['editorjs.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    providers: [EDITORJS_FORM_VALUE_ACCESSOR],
+    standalone: false
 })
 export class NgxEditorJSComponent implements OnDestroy, AfterContentInit, ControlValueAccessor {
   /**

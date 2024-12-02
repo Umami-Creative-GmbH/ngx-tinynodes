@@ -29,7 +29,8 @@ import { Block } from '../types/blocks';
  * <div id="my-editor" ngxEditorJS></div>
  */
 @Directive({
-  selector: '[ngxEditorJS]'
+    selector: '[ngxEditorJS]',
+    standalone: false
 })
 export class NgxEditorJSDirective implements OnDestroy, OnChanges, AfterContentInit {
   /**

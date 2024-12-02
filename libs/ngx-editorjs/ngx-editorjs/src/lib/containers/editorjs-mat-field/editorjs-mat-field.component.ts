@@ -53,11 +53,12 @@ export interface EditorJSMaterialForm
  * </mat-form-field>
  */
 @Component({
-  selector: 'ngx-editorjs-mat-field',
-  templateUrl: 'editorjs-mat-field.component.html',
-  styleUrls: ['editorjs-mat-field.component.scss'],
-  providers: [EDITORJS_MATERIAL_FIELD_CONTROL],
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'ngx-editorjs-mat-field',
+    templateUrl: 'editorjs-mat-field.component.html',
+    styleUrls: ['editorjs-mat-field.component.scss'],
+    providers: [EDITORJS_MATERIAL_FIELD_CONTROL],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class NgxEditorJSMatFieldComponent extends NgxEditorJSComponent implements EditorJSMaterialForm {
   /**
