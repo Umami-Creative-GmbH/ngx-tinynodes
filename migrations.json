@@ -1,44 +1,28 @@
 {
   "migrations": [
     {
-      "version": "20.0.0-beta.7",
-      "description": "Migration for v20.0.0-beta.7",
-      "implementation": "./src/migrations/update-20-0-0/move-use-daemon-process",
-      "package": "nx",
-      "name": "move-use-daemon-process"
+      "version": "19.0.0",
+      "factory": "./use-application-builder/migration",
+      "description": "Migrate application projects to the new build system. Application projects that are using the '@angular-devkit/build-angular' package's 'browser' and/or 'browser-esbuild' builders will be migrated to use the new 'application' builder. You can read more about this, including known issues and limitations, here: https://angular.dev/tools/cli/build-system-migration",
+      "optional": true,
+      "recommended": true,
+      "documentation": "tools/cli/build-system-migration",
+      "package": "@angular/cli",
+      "name": "use-application-builder"
     },
     {
-      "version": "20.0.1",
-      "description": "Set `useLegacyCache` to true for migrating workspaces",
-      "implementation": "./src/migrations/update-20-0-1/use-legacy-cache",
-      "x-repair-skip": true,
-      "package": "nx",
-      "name": "use-legacy-cache"
+      "version": "19.0.0",
+      "factory": "./update-workspace-config/migration",
+      "description": "Update the workspace configuration by replacing deprecated options in 'angular.json' for compatibility with the latest Angular CLI changes.",
+      "package": "@angular/cli",
+      "name": "update-workspace-config"
     },
     {
-      "cli": "nx",
-      "version": "19.6.0-beta.4",
-      "description": "Ensure Module Federation DTS is turned off by default.",
-      "factory": "./src/migrations/update-19-6-0/turn-off-dts-by-default",
-      "package": "@nx/angular",
-      "name": "update-19-6-0"
-    },
-    {
-      "cli": "nx",
-      "version": "19.6.0-beta.7",
-      "requires": { "@angular/core": ">=18.2.0" },
-      "description": "Update the @angular/cli package version to ~18.2.0.",
-      "factory": "./src/migrations/update-19-6-0/update-angular-cli",
-      "package": "@nx/angular",
-      "name": "update-angular-cli-version-18-2-0"
-    },
-    {
-      "cli": "nx",
-      "version": "19.6.1-beta.0",
-      "description": "Ensure Target Defaults are set correctly for Module Federation.",
-      "factory": "./src/migrations/update-19-6-1/ensure-depends-on-for-mf",
-      "package": "@nx/angular",
-      "name": "update-19-6-1-ensure-module-federation-target-defaults"
+      "version": "19.0.0",
+      "factory": "./update-ssr-imports/migration",
+      "description": "Update '@angular/ssr' import paths to use the new '/node' entry point when 'CommonEngine' is detected.",
+      "package": "@angular/cli",
+      "name": "update-ssr-imports"
     }
   ]
 }
