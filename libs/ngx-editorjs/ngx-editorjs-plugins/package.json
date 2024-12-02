@@ -1,7 +1,7 @@
 {
   "name": "@umami-creative/ngx-editorjs-ivy-plugins",
   "description": "Plugin service and default plugin modules for @umami-creative/ngx-editorjs",
-  "version": "18.1.3",
+  "version": "19.0.1",
   "author": {
     "name": "Kai Hentschel",
     "email": "kai@umami-creative.de",
@@ -24,8 +24,8 @@
     "tslib": "^2.6.2"
   },
   "peerDependencies": {
-    "@angular/common": "~18.0.0",
-    "@angular/core": "~18.0.0",
+    "@angular/common": "~19.0.0",
+    "@angular/core": "~19.0.0",
     "@editorjs/code": "^2.9.0",
     "@editorjs/header": "^2.8.1",
     "@editorjs/image": "^2.9.0",

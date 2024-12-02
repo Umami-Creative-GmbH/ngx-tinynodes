@@ -1,15 +1,15 @@
 {
   "name": "@umami-creative/ngx-editorjs-ivy",
   "description": "A library for using EditorJS in any Angular 17+ application",
-  "version": "18.1.3",
+  "version": "19.0.1",
   "author": {
     "name": "Kai Hentschel",
     "email": "kai@umami-creative.de",
     "url": "https://umami-creative.de"
   },
   "peerDependencies": {
-    "@editorjs/editorjs": "^2.29.1",
-    "@umami-creative/ngx-editorjs-ivy-plugins": "^18.1.1"
+    "@editorjs/editorjs": "^2.30.7",
+    "@umami-creative/ngx-editorjs-ivy-plugins": "^19.0.1"
   },
   "license": "MIT",
   "readme": "README.md",
