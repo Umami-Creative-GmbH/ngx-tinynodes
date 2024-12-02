@@ -22,24 +22,13 @@
   "targetDefaults": {
     "build": {
       "cache": true,
-      "inputs": [
-        "production",
-        "^production"
-      ]
+      "inputs": ["production", "^production"]
     }
   },
   "namedInputs": {
-    "default": [
-      "{projectRoot}/**/*",
-      "sharedGlobals"
-    ],
-    "sharedGlobals": [
-      "{workspaceRoot}/angular.json",
-      "{workspaceRoot}/tsconfig.json",
-      "{workspaceRoot}/nx.json"
-    ],
-    "production": [
-      "default"
-    ]
-  }
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "sharedGlobals": ["{workspaceRoot}/angular.json", "{workspaceRoot}/tsconfig.json", "{workspaceRoot}/nx.json"],
+    "production": ["default"]
+  },
+  "useLegacyCache": true
 }
